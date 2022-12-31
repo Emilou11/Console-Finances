@@ -95,10 +95,20 @@ var months = finances.length;
  console.log(months)
 
 //The net total amount of Profit/Losses over the entire period.
-var numbersArray 
+
+ //var valuesArray = 0
+ 
  for (var i = 0; i < finances.length; i++) {
-    console.log(finances[i][1])
- }
+   console.log(finances[i][1]);
+   }
+
+for (var values = 0; values < finances[i][1].length; values++) {
+    console.log(finances[values]);
+}
+
+ 
+
+ 
 
 
  
