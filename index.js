@@ -92,7 +92,7 @@ var finances = [
 //var months = ();
 
 var months = finances.length;
- console.log("Total Number Of Months = " + months)
+ console.log("Total Months: " + months)
 
 //The net total amount of Profit/Losses over the entire period.
 
@@ -102,7 +102,7 @@ var valuesTotal = 0
    valuesTotal += finances[i][1];
    }
 
-//console.log(valuesTotal);
+console.log("Total: $" + valuesTotal);
 
 
 //The average of the changes in Profit/Losses over the entire period.
@@ -121,10 +121,26 @@ var values = [];
     };
     return differenceArray;
  }
- console.log(createDifference(values));
- console.log(createDifference(values).length);
+ //console.log(createDifference(values));
+ //console.log(createDifference(values).length);
 
  //console.log(values);
+
+ //add all the values together and divide by total number of months to find the average.
+
+ var sumValues = 0
+ 
+
+    for( var i = 0; i < createDifference(values).length; i++){
+        sumValues =+ createDifference(values)[i]; 
+    }
+
+    console.log(sumValues)
+
+var averageChange = (Math.round(sumValues / 86))
+
+console.log(averageChange)
+ 
 
 
 
