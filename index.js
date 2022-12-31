@@ -87,6 +87,8 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+console.log("Finacial Analysis:   ")
+console.log("---------------------------")
 
 //The total number of months included in the dataset.
 //var months = ();
@@ -114,6 +116,7 @@ var values = [];
     values.push(finances[i][1]);
  }
 
+ 
  var createDifference = (values) => {
     var differenceArray = [];
     for(let i = 0; i < values.length; i++){
@@ -121,6 +124,8 @@ var values = [];
     };
     return differenceArray;
  }
+
+
  //console.log(createDifference(values));
  //console.log(createDifference(values).length);
 
@@ -135,24 +140,23 @@ var values = [];
         sumValues =+ createDifference(values)[i]; 
     }
 
-    console.log(sumValues)
+    //console.log(sumValues)
 
 var averageChange = (Math.round(sumValues / 86))
 
-console.log(averageChange)
- 
-
-
-
-
-
-
-
+console.log("Average Change: $" + averageChange)
 
 
 //The greatest increase in profits (date and amount) over the entire period.
-//var greatestIncrease = ();
+
+console.log("Greatest Increase In Profits:"  )
+
+
+
+
 
 //The greatest decrease in losses (date and amount) over the entire period.
 //var greatestDecrease = ();
+
+console.log("Greatest Decrease In Profits:")
 
