@@ -102,7 +102,7 @@ var valuesTotal = 0
    valuesTotal += finances[i][1];
    }
 
-console.log(valuesTotal);
+//console.log(valuesTotal);
 
 
 //The average of the changes in Profit/Losses over the entire period.
@@ -113,7 +113,22 @@ var values = [];
  for(var i = 0; i < finances.length; i++){
     values.push(finances[i][1]);
  }
- console.log(values);
+
+ var createDifference = (values) => {
+    var differenceArray = [];
+    for(let i = 0; i < values.length; i++){
+       differenceArray.push(Math.abs(values[i] - values[i - 1]));
+    };
+    return differenceArray;
+ }
+ console.log(createDifference(values));
+ console.log(createDifference(values).length);
+
+ //console.log(values);
+
+
+
+
 
 
 
