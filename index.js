@@ -95,19 +95,12 @@ var months = finances.length;
  console.log(months)
 
 //The net total amount of Profit/Losses over the entire period.
-var netTotal = 0;
- for (var rowInd = 0; rowInd < finances.length; rowInd++) {
-        var row = finances[rowInd];
-
-    for (var colInd = 0; colInd < row.length; colInd++) {
-      var total = row[colInd];
-        if(total === Number){
-        netTotal++;
-        }
-    }
+var numbersArray 
+ for (var i = 0; i < finances.length; i++) {
+    console.log(finances[i][1])
  }
 
-console.log(netTotal);
+
  
 
 
