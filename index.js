@@ -104,17 +104,20 @@ var valuesTotal = 0
 
 console.log(valuesTotal);
 
- 
-
- 
-
-
- 
-
-
 
 //The average of the changes in Profit/Losses over the entire period.
-//var averageChange = ();
+
+//var averageChange 
+
+var values = [];
+ for(var i = 0; i < finances.length; i++){
+    values.push(finances[i][1]);
+ }
+ console.log(values);
+
+
+
+
 
 //The greatest increase in profits (date and amount) over the entire period.
 //var greatestIncrease = ();
