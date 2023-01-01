@@ -106,57 +106,46 @@ var valuesTotal = 0
 
 console.log("Total: $" + valuesTotal);
 
-
 //The average of the changes in Profit/Losses over the entire period.
-
-//var averageChange 
 
 var values = [];
  for(var i = 0; i < finances.length; i++){
     values.push(finances[i][1]);
  }
 
- 
  var createDifference = (values) => {
-    var differenceArray = [];
+   var differenceArray = [];
     for(let i = 0; i < values.length; i++){
        differenceArray.push(Math.abs(values[i] - values[i - 1]));
     };
-    return differenceArray;
- }
-
-
- //console.log(createDifference(values));
- //console.log(createDifference(values).length);
-
- //console.log(values);
-
- //add all the values together and divide by total number of months to find the average.
-
- var sumValues = 0
+    return differenceArray 
+        //differenceArray.sort(function(a, b){return b - a});
+        //console.log(createDifference(differenceArray))
+    }
  
 
-    for( var i = 0; i < createDifference(values).length; i++){
+
+
+
+
+//add all the values together and divide by total number of months to find the average.
+
+var sumValues = 0
+ for( var i = 0; i < createDifference(values).length; i++){
         sumValues =+ createDifference(values)[i]; 
     }
-
-    //console.log(sumValues)
 
 var averageChange = (Math.round(sumValues / 86))
 
 console.log("Average Change: $" + averageChange)
 
-
 //The greatest increase in profits (date and amount) over the entire period.
 
-console.log("Greatest Increase In Profits:"  )
-
-
-
+var sortedValues = createDifference(values).sort(function(a, b){return b - a});
+console.log("Greatest Increase In Profits: $" + sortedValues[1])
 
 
 //The greatest decrease in losses (date and amount) over the entire period.
-//var greatestDecrease = ();
 
-console.log("Greatest Decrease In Profits:")
+console.log("Greatest Decrease In Profits: $" + sortedValues[85])
 
