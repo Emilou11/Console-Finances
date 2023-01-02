@@ -90,48 +90,43 @@ var finances = [
 console.log("Finacial Analysis:   ")
 console.log("---------------------------")
 
-//The total number of months included in the dataset.
-//var months = ();
+/*The total number of months included in the dataset.
+Add the number of months together.*/
 
 var months = finances.length;
 console.log("Total Months: " + months)
 
-//The net total amount of Profit/Losses over the entire period.
+/*The net total amount of Profit/Losses over the entire period.
+Add up all the values*/
 
 var valuesTotal = 0
-
 for (var i = 0; i < finances.length; i++) {
     valuesTotal += finances[i][1];
 }
-
 console.log("Total: $" + valuesTotal);
 
-//The average of the changes in Profit/Losses over the entire period.
+/*The average of the changes in Profit/Losses over the entire period.
+Add month to month together to get change in profit/loss for each month. (Jan + Feb + | Feb + Mar = ....) */
 
 var values = [];
 for (var i = 0; i < finances.length; i++) {
     values.push(finances[i][1]);
 }
+
 var differenceArray = [];
+
 var createDifference = (values) => {
-   
-    for (let i = 0; i < values.length; i++) {
-        // console.log(values[i - 1])
-        console.log("hit");
+   for (let i = 0; i < values.length; i++) { 
         if (values[(i - 1)] != undefined){
             differenceArray.push(values[i] - values[i - 1]);
-        }
-        
+        }     
     };
     return differenceArray
 }
 createDifference(values)
 
-
-
-
-
-//add all the values together and divide by total number of months to find the average.
+/*Add all those values together.
+Devide by the number of months.*/
 
 var sumValues = 0
 for (var i = 0; i < differenceArray.length; i++) {
@@ -145,9 +140,22 @@ console.log("Average Change: $" + averageChange)
 //The greatest increase in profits (date and amount) over the entire period.
 
 var sortedValues = differenceArray.sort(function (a, b) { return b - a });
-console.log("Greatest Increase In Profits: $" + sortedValues[1])
 
+console.log("Greatest Increase In Profits: $" + sortedValues[1])
 
 //The greatest decrease in losses (date and amount) over the entire period.
 
-console.log("Greatest Decrease In Profits: $" + sortedValues[85])
+console.log("Greatest Decrease In Profits: $" + sortedValues[84])
+
+// Add the new values to the original array.
+
+
+for (var i = 0; i < sortedValues.length; i++) {
+    finances.push(sortedValues[i]);
+};
+
+console.log(finances)
+
+
+
+
