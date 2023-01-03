@@ -16,7 +16,7 @@ To analysis the finances of a company and provide the following results;
 ## Usage 
 
 
-![alt text](assets/images/screenshot.png)
+![Screenshot of financial analysis](../Console-Finances/images/Screenshot.png)
 ```
 
 ## License

@@ -150,11 +150,7 @@ console.log("Greatest Decrease In Profits: $" + sortedValues[84])
 // Add the new values to the original array.
 
 
-for (var i = 0; i < sortedValues.length; i++) {
-    finances.push(sortedValues[i]);
-};
 
-console.log(finances)
 
 
 
